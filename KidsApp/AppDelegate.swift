@@ -12,7 +12,12 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
+    // こどもの名前を保持するプロパティ
+    var childName: String?
+    
+    // こどものデータそのもの(childArrayの中身=Childクラスのデータそのもの=Child型)を保持するプロパティ
+    //var childData: Child?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

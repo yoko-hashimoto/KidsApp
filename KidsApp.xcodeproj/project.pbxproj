@@ -12,9 +12,50 @@
 		9F0DCF881F90D67D00FCE668 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F0DCF861F90D67D00FCE668 /* Main.storyboard */; };
 		9F0DCF8A1F90D67D00FCE668 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F0DCF891F90D67D00FCE668 /* Assets.xcassets */; };
 		9F0DCF8D1F90D67D00FCE668 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F0DCF8B1F90D67D00FCE668 /* LaunchScreen.storyboard */; };
+		9F0DCF951F90D72B00FCE668 /* PromiseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0DCF941F90D72B00FCE668 /* PromiseViewController.swift */; };
+		9F0DCF971F90D85C00FCE668 /* PromiseInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0DCF961F90D85C00FCE668 /* PromiseInputViewController.swift */; };
+		9F0DCF9B1F90DC4F00FCE668 /* RewardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0DCF9A1F90DC4F00FCE668 /* RewardViewController.swift */; };
+		9F0DCF9D1F90DD2B00FCE668 /* RewardInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0DCF9C1F90DD2B00FCE668 /* RewardInputViewController.swift */; };
+		9F0DCFA11F90EB4600FCE668 /* ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0DCFA01F90EB4600FCE668 /* ChildViewController.swift */; };
+		9F0DCFA31F90EBD800FCE668 /* ChildInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0DCFA21F90EBD800FCE668 /* ChildInputViewController.swift */; };
+		9F31DC6F1FB6C8CF00B4D733 /* ChildSwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F31DC6E1FB6C8CF00B4D733 /* ChildSwitchViewController.swift */; };
+		9F31DC761FB7449000B4D733 /* ChildSwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F31DC741FB7449000B4D733 /* ChildSwitchTableViewCell.swift */; };
+		9F31DC771FB7449000B4D733 /* ChildSwitchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F31DC751FB7449000B4D733 /* ChildSwitchTableViewCell.xib */; };
+		9F4320421FAC645900C4DE68 /* Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4320411FAC645900C4DE68 /* Child.swift */; };
+		9F44A2241FAB30AC0092AA43 /* Reward.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F44A2231FAB30AB0092AA43 /* Reward.swift */; };
+		9F758B321F9AAD8900B7A0E4 /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F758B311F9AAD8900B7A0E4 /* Promise.swift */; };
+		9F80B96E202B902E00E3BCF6 /* child-2@2×.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F80B95C202B902E00E3BCF6 /* child-2@2×.png */; };
+		9F80B96F202B902E00E3BCF6 /* child-2@3×.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F80B95D202B902E00E3BCF6 /* child-2@3×.png */; };
+		9F80B970202B902E00E3BCF6 /* child.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F80B95E202B902E00E3BCF6 /* child.png */; };
+		9F80B971202B902E00E3BCF6 /* child@2×.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F80B95F202B902E00E3BCF6 /* child@2×.png */; };
+		9F80B972202B902E00E3BCF6 /* child@3×.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F80B960202B902E00E3BCF6 /* child@3×.png */; };
+		9F80B973202B902E00E3BCF6 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F80B961202B902E00E3BCF6 /* home.png */; };
+		9F80B974202B902E00E3BCF6 /* home@2×.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F80B962202B902E00E3BCF6 /* home@2×.png */; };
+		9F80B975202B902E00E3BCF6 /* home@3×.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F80B963202B902E00E3BCF6 /* home@3×.png */; };
+		9F80B976202B902E00E3BCF6 /* promise.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F80B964202B902E00E3BCF6 /* promise.png */; };
+		9F80B977202B902E00E3BCF6 /* promise＠×3.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F80B965202B902E00E3BCF6 /* promise＠×3.png */; };
+		9F80B978202B902E00E3BCF6 /* promise@2×.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F80B966202B902E00E3BCF6 /* promise@2×.png */; };
+		9F80B979202B902E00E3BCF6 /* reward.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F80B967202B902E00E3BCF6 /* reward.png */; };
+		9F80B97A202B902E00E3BCF6 /* reward@2×.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F80B968202B902E00E3BCF6 /* reward@2×.png */; };
+		9F80B97B202B902E00E3BCF6 /* reward@3×.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F80B969202B902E00E3BCF6 /* reward@3×.png */; };
+		9F80B97C202B902E00E3BCF6 /* switch.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F80B96A202B902E00E3BCF6 /* switch.png */; };
+		9F80B97D202B902E00E3BCF6 /* switch@2×.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F80B96B202B902E00E3BCF6 /* switch@2×.png */; };
+		9F80B97E202B902E00E3BCF6 /* switch@3×.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F80B96C202B902E00E3BCF6 /* switch@3×.png */; };
+		9FA6AC231F90F31200F746EB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA6AC221F90F31200F746EB /* HomeViewController.swift */; };
+		9FCF83BA20319B5A00136A9B /* hiyoko.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 9FCF83B920319B5A00136A9B /* hiyoko.PNG */; };
+		9FCF83BC2031BE2800136A9B /* Pget-2ー.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FCF83BB2031BE2800136A9B /* Pget-2ー.png */; };
+		9FCF83BE203483D300136A9B /* hiyoko-2.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 9FCF83BD203483D300136A9B /* hiyoko-2.PNG */; };
+		9FDF25CB1F94C390001CB83F /* PromiseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDF25C91F94C390001CB83F /* PromiseTableViewCell.swift */; };
+		9FDF25CC1F94C390001CB83F /* PromiseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FDF25CA1F94C390001CB83F /* PromiseTableViewCell.xib */; };
+		9FDF25CF1F94D591001CB83F /* RewardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDF25CD1F94D591001CB83F /* RewardTableViewCell.swift */; };
+		9FDF25D01F94D591001CB83F /* RewardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FDF25CE1F94D591001CB83F /* RewardTableViewCell.xib */; };
+		9FDF25D31F94D5D2001CB83F /* ChildTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDF25D11F94D5D2001CB83F /* ChildTableViewCell.swift */; };
+		9FDF25D41F94D5D2001CB83F /* ChildTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FDF25D21F94D5D2001CB83F /* ChildTableViewCell.xib */; };
+		A6AF3924D89FB3B1E7C7B050 /* Pods_KidsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDAFDF0F36D364C4AB6512E /* Pods_KidsApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4EDAFDF0F36D364C4AB6512E /* Pods_KidsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KidsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F0DCF7F1F90D67D00FCE668 /* KidsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KidsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F0DCF821F90D67D00FCE668 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F0DCF841F90D67D00FCE668 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +63,49 @@
 		9F0DCF891F90D67D00FCE668 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F0DCF8C1F90D67D00FCE668 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F0DCF8E1F90D67D00FCE668 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F0DCF941F90D72B00FCE668 /* PromiseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromiseViewController.swift; sourceTree = "<group>"; };
+		9F0DCF961F90D85C00FCE668 /* PromiseInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromiseInputViewController.swift; sourceTree = "<group>"; };
+		9F0DCF9A1F90DC4F00FCE668 /* RewardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewardViewController.swift; sourceTree = "<group>"; };
+		9F0DCF9C1F90DD2B00FCE668 /* RewardInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewardInputViewController.swift; sourceTree = "<group>"; };
+		9F0DCFA01F90EB4600FCE668 /* ChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildViewController.swift; sourceTree = "<group>"; };
+		9F0DCFA21F90EBD800FCE668 /* ChildInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildInputViewController.swift; sourceTree = "<group>"; };
+		9F31DC6E1FB6C8CF00B4D733 /* ChildSwitchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildSwitchViewController.swift; sourceTree = "<group>"; };
+		9F31DC741FB7449000B4D733 /* ChildSwitchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildSwitchTableViewCell.swift; sourceTree = "<group>"; };
+		9F31DC751FB7449000B4D733 /* ChildSwitchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChildSwitchTableViewCell.xib; sourceTree = "<group>"; };
+		9F4320411FAC645900C4DE68 /* Child.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Child.swift; sourceTree = "<group>"; };
+		9F44A2231FAB30AB0092AA43 /* Reward.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reward.swift; sourceTree = "<group>"; };
+		9F758B311F9AAD8900B7A0E4 /* Promise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Promise.swift; sourceTree = "<group>"; };
+		9F80B95C202B902E00E3BCF6 /* child-2@2×.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "child-2@2×.png"; path = "../../Downloads/Kids App image /child-2@2×.png"; sourceTree = "<group>"; };
+		9F80B95D202B902E00E3BCF6 /* child-2@3×.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "child-2@3×.png"; path = "../../Downloads/Kids App image /child-2@3×.png"; sourceTree = "<group>"; };
+		9F80B95E202B902E00E3BCF6 /* child.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = child.png; path = "../../Downloads/Kids App image /child.png"; sourceTree = "<group>"; };
+		9F80B95F202B902E00E3BCF6 /* child@2×.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "child@2×.png"; path = "../../Downloads/Kids App image /child@2×.png"; sourceTree = "<group>"; };
+		9F80B960202B902E00E3BCF6 /* child@3×.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "child@3×.png"; path = "../../Downloads/Kids App image /child@3×.png"; sourceTree = "<group>"; };
+		9F80B961202B902E00E3BCF6 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home.png; path = "../../Downloads/Kids App image /home.png"; sourceTree = "<group>"; };
+		9F80B962202B902E00E3BCF6 /* home@2×.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "home@2×.png"; path = "../../Downloads/Kids App image /home@2×.png"; sourceTree = "<group>"; };
+		9F80B963202B902E00E3BCF6 /* home@3×.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "home@3×.png"; path = "../../Downloads/Kids App image /home@3×.png"; sourceTree = "<group>"; };
+		9F80B964202B902E00E3BCF6 /* promise.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = promise.png; path = "../../Downloads/Kids App image /promise.png"; sourceTree = "<group>"; };
+		9F80B965202B902E00E3BCF6 /* promise＠×3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "promise＠×3.png"; path = "../../Downloads/Kids App image /promise＠×3.png"; sourceTree = "<group>"; };
+		9F80B966202B902E00E3BCF6 /* promise@2×.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "promise@2×.png"; path = "../../Downloads/Kids App image /promise@2×.png"; sourceTree = "<group>"; };
+		9F80B967202B902E00E3BCF6 /* reward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = reward.png; path = "../../Downloads/Kids App image /reward.png"; sourceTree = "<group>"; };
+		9F80B968202B902E00E3BCF6 /* reward@2×.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "reward@2×.png"; path = "../../Downloads/Kids App image /reward@2×.png"; sourceTree = "<group>"; };
+		9F80B969202B902E00E3BCF6 /* reward@3×.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "reward@3×.png"; path = "../../Downloads/Kids App image /reward@3×.png"; sourceTree = "<group>"; };
+		9F80B96A202B902E00E3BCF6 /* switch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = switch.png; path = "../../Downloads/Kids App image /switch.png"; sourceTree = "<group>"; };
+		9F80B96B202B902E00E3BCF6 /* switch@2×.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "switch@2×.png"; path = "../../Downloads/Kids App image /switch@2×.png"; sourceTree = "<group>"; };
+		9F80B96C202B902E00E3BCF6 /* switch@3×.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "switch@3×.png"; path = "../../Downloads/Kids App image /switch@3×.png"; sourceTree = "<group>"; };
+		9FA6AC221F90F31200F746EB /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		9FCF83B920319B5A00136A9B /* hiyoko.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hiyoko.PNG; sourceTree = "<group>"; };
+		9FCF83BB2031BE2800136A9B /* Pget-2ー.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pget-2ー.png"; sourceTree = "<group>"; };
+		9FCF83BD203483D300136A9B /* hiyoko-2.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hiyoko-2.PNG"; sourceTree = "<group>"; };
+		9FCF83BF2050845900136A9B /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		9FCF83C02050845900136A9B /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		9FDF25C91F94C390001CB83F /* PromiseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromiseTableViewCell.swift; sourceTree = "<group>"; };
+		9FDF25CA1F94C390001CB83F /* PromiseTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PromiseTableViewCell.xib; sourceTree = "<group>"; };
+		9FDF25CD1F94D591001CB83F /* RewardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewardTableViewCell.swift; sourceTree = "<group>"; };
+		9FDF25CE1F94D591001CB83F /* RewardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RewardTableViewCell.xib; sourceTree = "<group>"; };
+		9FDF25D11F94D5D2001CB83F /* ChildTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildTableViewCell.swift; sourceTree = "<group>"; };
+		9FDF25D21F94D5D2001CB83F /* ChildTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChildTableViewCell.xib; sourceTree = "<group>"; };
+		C74354540590D21F2A86788A /* Pods-KidsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KidsApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-KidsApp/Pods-KidsApp.release.xcconfig"; sourceTree = "<group>"; };
+		E0479C8E790DEA01ADB706BC /* Pods-KidsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KidsApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KidsApp/Pods-KidsApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +113,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6AF3924D89FB3B1E7C7B050 /* Pods_KidsApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B54A6639A12B14DDEA18772 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E0479C8E790DEA01ADB706BC /* Pods-KidsApp.debug.xcconfig */,
+				C74354540590D21F2A86788A /* Pods-KidsApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		9F0DCF761F90D67D00FCE668 = {
 			isa = PBXGroup;
 			children = (
 				9F0DCF811F90D67D00FCE668 /* KidsApp */,
 				9F0DCF801F90D67D00FCE668 /* Products */,
+				7B54A6639A12B14DDEA18772 /* Pods */,
+				CF1E807842F6E3F277AE5377 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,11 +153,58 @@
 				9F0DCF821F90D67D00FCE668 /* AppDelegate.swift */,
 				9F0DCF841F90D67D00FCE668 /* ViewController.swift */,
 				9F0DCF861F90D67D00FCE668 /* Main.storyboard */,
+				9F31DC6E1FB6C8CF00B4D733 /* ChildSwitchViewController.swift */,
+				9FDF25C91F94C390001CB83F /* PromiseTableViewCell.swift */,
+				9FDF25CA1F94C390001CB83F /* PromiseTableViewCell.xib */,
+				9FDF25CD1F94D591001CB83F /* RewardTableViewCell.swift */,
+				9FDF25CE1F94D591001CB83F /* RewardTableViewCell.xib */,
+				9FDF25D11F94D5D2001CB83F /* ChildTableViewCell.swift */,
+				9FDF25D21F94D5D2001CB83F /* ChildTableViewCell.xib */,
+				9F31DC741FB7449000B4D733 /* ChildSwitchTableViewCell.swift */,
+				9F31DC751FB7449000B4D733 /* ChildSwitchTableViewCell.xib */,
+				9FA6AC221F90F31200F746EB /* HomeViewController.swift */,
+				9F4320411FAC645900C4DE68 /* Child.swift */,
+				9F0DCFA21F90EBD800FCE668 /* ChildInputViewController.swift */,
+				9F0DCFA01F90EB4600FCE668 /* ChildViewController.swift */,
+				9F44A2231FAB30AB0092AA43 /* Reward.swift */,
+				9F0DCF9C1F90DD2B00FCE668 /* RewardInputViewController.swift */,
+				9F0DCF9A1F90DC4F00FCE668 /* RewardViewController.swift */,
+				9F758B311F9AAD8900B7A0E4 /* Promise.swift */,
+				9F0DCF961F90D85C00FCE668 /* PromiseInputViewController.swift */,
+				9F0DCF941F90D72B00FCE668 /* PromiseViewController.swift */,
 				9F0DCF891F90D67D00FCE668 /* Assets.xcassets */,
+				9F80B95C202B902E00E3BCF6 /* child-2@2×.png */,
+				9F80B95D202B902E00E3BCF6 /* child-2@3×.png */,
+				9F80B95E202B902E00E3BCF6 /* child.png */,
+				9F80B95F202B902E00E3BCF6 /* child@2×.png */,
+				9F80B960202B902E00E3BCF6 /* child@3×.png */,
+				9F80B961202B902E00E3BCF6 /* home.png */,
+				9F80B962202B902E00E3BCF6 /* home@2×.png */,
+				9F80B963202B902E00E3BCF6 /* home@3×.png */,
+				9F80B964202B902E00E3BCF6 /* promise.png */,
+				9F80B965202B902E00E3BCF6 /* promise＠×3.png */,
+				9F80B966202B902E00E3BCF6 /* promise@2×.png */,
+				9F80B967202B902E00E3BCF6 /* reward.png */,
+				9F80B968202B902E00E3BCF6 /* reward@2×.png */,
+				9F80B969202B902E00E3BCF6 /* reward@3×.png */,
+				9F80B96A202B902E00E3BCF6 /* switch.png */,
+				9F80B96B202B902E00E3BCF6 /* switch@2×.png */,
+				9F80B96C202B902E00E3BCF6 /* switch@3×.png */,
+				9FCF83B920319B5A00136A9B /* hiyoko.PNG */,
+				9FCF83BD203483D300136A9B /* hiyoko-2.PNG */,
+				9FCF83BB2031BE2800136A9B /* Pget-2ー.png */,
 				9F0DCF8B1F90D67D00FCE668 /* LaunchScreen.storyboard */,
 				9F0DCF8E1F90D67D00FCE668 /* Info.plist */,
 			);
 			path = KidsApp;
+			sourceTree = "<group>";
+		};
+		CF1E807842F6E3F277AE5377 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4EDAFDF0F36D364C4AB6512E /* Pods_KidsApp.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +214,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F0DCF911F90D67D00FCE668 /* Build configuration list for PBXNativeTarget "KidsApp" */;
 			buildPhases = (
+				9AF2BF276311CB9CEA03FB08 /* [CP] Check Pods Manifest.lock */,
 				9F0DCF7B1F90D67D00FCE668 /* Sources */,
 				9F0DCF7C1F90D67D00FCE668 /* Frameworks */,
 				9F0DCF7D1F90D67D00FCE668 /* Resources */,
+				49BDEDD7032A263C1834AE08 /* [CP] Embed Pods Frameworks */,
+				B0D65DF29558FD23174A4137 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,7 +242,7 @@
 				TargetAttributes = {
 					9F0DCF7E1F90D67D00FCE668 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 2Q4FG5JUK6;
+						DevelopmentTeam = 7AQGFP6MTK;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -124,13 +270,85 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F80B97E202B902E00E3BCF6 /* switch@3×.png in Resources */,
+				9F80B97C202B902E00E3BCF6 /* switch.png in Resources */,
+				9F80B97A202B902E00E3BCF6 /* reward@2×.png in Resources */,
+				9F31DC771FB7449000B4D733 /* ChildSwitchTableViewCell.xib in Resources */,
+				9F80B97D202B902E00E3BCF6 /* switch@2×.png in Resources */,
+				9F80B975202B902E00E3BCF6 /* home@3×.png in Resources */,
+				9F80B973202B902E00E3BCF6 /* home.png in Resources */,
+				9F80B972202B902E00E3BCF6 /* child@3×.png in Resources */,
+				9F80B96F202B902E00E3BCF6 /* child-2@3×.png in Resources */,
+				9F80B974202B902E00E3BCF6 /* home@2×.png in Resources */,
+				9FCF83BA20319B5A00136A9B /* hiyoko.PNG in Resources */,
+				9FDF25D01F94D591001CB83F /* RewardTableViewCell.xib in Resources */,
+				9F80B977202B902E00E3BCF6 /* promise＠×3.png in Resources */,
+				9F80B970202B902E00E3BCF6 /* child.png in Resources */,
+				9F80B97B202B902E00E3BCF6 /* reward@3×.png in Resources */,
+				9FCF83BE203483D300136A9B /* hiyoko-2.PNG in Resources */,
 				9F0DCF8D1F90D67D00FCE668 /* LaunchScreen.storyboard in Resources */,
+				9F80B96E202B902E00E3BCF6 /* child-2@2×.png in Resources */,
+				9FDF25D41F94D5D2001CB83F /* ChildTableViewCell.xib in Resources */,
+				9F80B971202B902E00E3BCF6 /* child@2×.png in Resources */,
 				9F0DCF8A1F90D67D00FCE668 /* Assets.xcassets in Resources */,
+				9F80B976202B902E00E3BCF6 /* promise.png in Resources */,
+				9FCF83BC2031BE2800136A9B /* Pget-2ー.png in Resources */,
 				9F0DCF881F90D67D00FCE668 /* Main.storyboard in Resources */,
+				9FDF25CC1F94C390001CB83F /* PromiseTableViewCell.xib in Resources */,
+				9F80B979202B902E00E3BCF6 /* reward.png in Resources */,
+				9F80B978202B902E00E3BCF6 /* promise@2×.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		49BDEDD7032A263C1834AE08 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KidsApp/Pods-KidsApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9AF2BF276311CB9CEA03FB08 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B0D65DF29558FD23174A4137 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KidsApp/Pods-KidsApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9F0DCF7B1F90D67D00FCE668 /* Sources */ = {
@@ -138,7 +356,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F0DCF851F90D67D00FCE668 /* ViewController.swift in Sources */,
+				9F0DCF9D1F90DD2B00FCE668 /* RewardInputViewController.swift in Sources */,
+				9FDF25CB1F94C390001CB83F /* PromiseTableViewCell.swift in Sources */,
+				9FDF25CF1F94D591001CB83F /* RewardTableViewCell.swift in Sources */,
+				9F44A2241FAB30AC0092AA43 /* Reward.swift in Sources */,
 				9F0DCF831F90D67D00FCE668 /* AppDelegate.swift in Sources */,
+				9FDF25D31F94D5D2001CB83F /* ChildTableViewCell.swift in Sources */,
+				9F0DCFA11F90EB4600FCE668 /* ChildViewController.swift in Sources */,
+				9F4320421FAC645900C4DE68 /* Child.swift in Sources */,
+				9F31DC761FB7449000B4D733 /* ChildSwitchTableViewCell.swift in Sources */,
+				9F758B321F9AAD8900B7A0E4 /* Promise.swift in Sources */,
+				9F0DCF971F90D85C00FCE668 /* PromiseInputViewController.swift in Sources */,
+				9F0DCF951F90D72B00FCE668 /* PromiseViewController.swift in Sources */,
+				9F0DCFA31F90EBD800FCE668 /* ChildInputViewController.swift in Sources */,
+				9F0DCF9B1F90DC4F00FCE668 /* RewardViewController.swift in Sources */,
+				9FA6AC231F90F31200F746EB /* HomeViewController.swift in Sources */,
+				9F31DC6F1FB6C8CF00B4D733 /* ChildSwitchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +382,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				9F0DCF871F90D67D00FCE668 /* Base */,
+				9FCF83BF2050845900136A9B /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -157,6 +391,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				9F0DCF8C1F90D67D00FCE668 /* Base */,
+				9FCF83C02050845900136A9B /* ja */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -168,6 +403,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -218,6 +454,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -259,26 +496,35 @@
 		};
 		9F0DCF921F90D67D00FCE668 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0479C8E790DEA01ADB706BC /* Pods-KidsApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2Q4FG5JUK6;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = KidsApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jp.techacademy.yoko.hashimoto.KidsApp;
+				PRODUCT_BUNDLE_IDENTIFIER = net.yoooko.KidsApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		9F0DCF931F90D67D00FCE668 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C74354540590D21F2A86788A /* Pods-KidsApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2Q4FG5JUK6;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = KidsApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jp.techacademy.yoko.hashimoto.KidsApp;
+				PRODUCT_BUNDLE_IDENTIFIER = net.yoooko.KidsApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -302,6 +548,7 @@
 				9F0DCF931F90D67D00FCE668 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

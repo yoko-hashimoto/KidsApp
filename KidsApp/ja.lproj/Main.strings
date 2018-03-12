@@ -1,0 +1,87 @@
+
+/* Class = "UILabel"; text = "ごほうび"; ObjectID = "0HU-nU-OBq"; */
+"0HU-nU-OBq.text" = "ごほうび";
+
+/* Class = "UILabel"; text = "(　　) P で GET !"; ObjectID = "2F4-hY-qnb"; */
+"2F4-hY-qnb.text" = "(　　) P で GET !";
+
+/* Class = "UITextField"; placeholder = "ごほうびの内容"; ObjectID = "2hA-aJ-uo3"; */
+"2hA-aJ-uo3.placeholder" = "ごほうびの内容";
+
+/* Class = "UILabel"; text = "やくそく"; ObjectID = "4Ea-Qq-MyG"; */
+"4Ea-Qq-MyG.text" = "やくそく";
+
+/* Class = "UITextField"; placeholder = "名前"; ObjectID = "5Xj-CB-k7f"; */
+"5Xj-CB-k7f.placeholder" = "名前";
+
+/* Class = "UITextField"; placeholder = "やくそくの内容"; ObjectID = "96m-nn-WNF"; */
+"96m-nn-WNF.placeholder" = "やくそくの内容";
+
+/* Class = "UILabel"; text = "やくそく"; ObjectID = "9fF-yT-Nbi"; */
+"9fF-yT-Nbi.text" = "やくそく";
+
+/* Class = "UITabBarItem"; title = "やくそく"; ObjectID = "BaA-Hx-N2O"; */
+"BaA-Hx-N2O.title" = "やくそく";
+
+/* Class = "UILabel"; text = "ポイント"; ObjectID = "FIC-R5-Svf"; */
+"FIC-R5-Svf.text" = "ポイント";
+
+/* Class = "UITextField"; placeholder = "　0"; ObjectID = "JYA-IL-tga"; */
+"JYA-IL-tga.placeholder" = "　0";
+
+/* Class = "UIButton"; normalTitle = "キャンセル"; ObjectID = "KjQ-uA-Zhk"; */
+"KjQ-uA-Zhk.normalTitle" = "キャンセル";
+
+/* Class = "UIButton"; normalTitle = "保存"; ObjectID = "Muu-gp-4w5"; */
+"Muu-gp-4w5.normalTitle" = "保存";
+
+/* Class = "UILabel"; text = "ごほうび"; ObjectID = "ROp-D3-c93"; */
+"ROp-D3-c93.text" = "ごほうび";
+
+/* Class = "UIButton"; normalTitle = "キャンセル"; ObjectID = "Tfm-mX-hYz"; */
+"Tfm-mX-hYz.normalTitle" = "キャンセル";
+
+/* Class = "UILabel"; text = "こども一覧"; ObjectID = "WOL-YU-3Dl"; */
+"WOL-YU-3Dl.text" = "こども一覧";
+
+/* Class = "UILabel"; text = "こども"; ObjectID = "XJW-F3-0B9"; */
+"XJW-F3-0B9.text" = "こども";
+
+/* Class = "UIButton"; normalTitle = "キャンセル"; ObjectID = "d59-J2-ErP"; */
+"d59-J2-ErP.normalTitle" = "キャンセル";
+
+/* Class = "UIButton"; normalTitle = "保存"; ObjectID = "eXg-o0-pcj"; */
+"eXg-o0-pcj.normalTitle" = "保存";
+
+/* Class = "UILabel"; text = "ポイント"; ObjectID = "gZB-ir-Idi"; */
+"gZB-ir-Idi.text" = "ポイント";
+
+/* Class = "UILabel"; text = "(　　) P"; ObjectID = "i7a-lW-6sY"; */
+"i7a-lW-6sY.text" = "(　　) P";
+
+/* Class = "UITabBarItem"; title = "こども一覧"; ObjectID = "kvM-yi-Vzc"; */
+"kvM-yi-Vzc.title" = "こども一覧";
+
+/* Class = "UILabel"; text = "なまえ"; ObjectID = "msP-vn-asl"; */
+"msP-vn-asl.text" = "なまえ";
+
+/* Class = "UIButton"; normalTitle = "保存"; ObjectID = "nIv-Kd-PWN"; */
+"nIv-Kd-PWN.normalTitle" = "保存";
+
+/* Class = "UILabel"; text = "ごほうび"; ObjectID = "nJ4-K4-XgT"; */
+"nJ4-K4-XgT.text" = "ごほうび";
+
+/* Class = "UITabBarItem"; title = "ごほうび"; ObjectID = "rQ1-M4-4iH"; */
+"rQ1-M4-4iH.title" = "ごほうび";
+
+/* Class = "UILabel"; text = "こども切替"; ObjectID = "uCq-15-uYJ"; */
+"uCq-15-uYJ.text" = "こども切替";
+
+/* Class = "UITextField"; placeholder = "0"; ObjectID = "ubK-jh-xrz"; */
+"ubK-jh-xrz.placeholder" = "0";
+
+/* Class = "UITabBarItem"; title = "ホーム"; ObjectID = "xOU-c0-7fZ"; */
+"xOU-c0-7fZ.title" = "ホーム";
+
+/* Class = "UIButton"; normalTitle = "キャンセル"; ObjectID = "zTY-Me-t1d"; */
+"zTY-Me-t1d.normalTitle" = "キャンセル";

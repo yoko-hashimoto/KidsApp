@@ -9,10 +9,53 @@
 import UIKit
 import RealmSwift
 import SVProgressHUD
+import CMPopTipView
 
 class RewardViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var rewardTableView: UITableView!
+    @IBOutlet weak var rewardAddButton: UIBarButtonItem!
+    
+    // lazy var は変数が参照されたときに { }() の中で初期化した値を使う
+    lazy var cmPop: CMPopTipView = {
+        
+        // CMPopTipViewのメッセージ
+        let v = CMPopTipView(message: "ポイントが貯まったらごほうびGET!")!
+        
+        // CMPopTipViewのborderColor
+        v.borderColor = UIColor.clear
+        
+        // CMPopTipViewの背景色
+        v.backgroundColor = UIColor.orange
+        
+        // 3D表示にするかどうか
+        v.has3DStyle = false
+        
+        // グラデーション表示にするかどうか
+        v.hasGradientBackground = false
+        
+        return v
+    }()
+    
+    // lazy var は変数が参照されたときに { }() の中で初期化した値を使う
+    lazy var cmPop2: CMPopTipView = {
+        // navigationBarのCMPopTipViewのメッセージ
+        let v = CMPopTipView(message: "欲しいごほうびを登録！")!
+        
+        // CMPopTipViewのborderColor
+        v.borderColor = UIColor.clear
+        
+        // CMPopTipViewの背景色
+        v.backgroundColor = UIColor.orange
+        
+        // 3D表示にするかどうか
+        v.has3DStyle = false
+        
+        // グラデーション表示にするかどうか
+        v.hasGradientBackground = false
+        
+        return v
+    }()
     
     // Realmインスタンスを取得する
     let realm = try!Realm()
@@ -20,7 +63,7 @@ class RewardViewController: UIViewController,UITableViewDelegate, UITableViewDat
     // DB内のごほうびが格納されるリスト
     // 完了していない順ソート： (昇順)
     // 以降内容をアップデートするとリスト内は自動的に更新される。
-    var rewardArray = try!Realm().objects(Reward.self).sorted(byKeyPath: "finished", ascending: true)
+    var rewardArray = try!Realm().objects(Reward.self).sorted(byKeyPath: "finished", ascending: true).filter("FALSEPREDICATE")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,9 +113,17 @@ class RewardViewController: UIViewController,UITableViewDelegate, UITableViewDat
         // ごほうびのポイントを表示する
         cell.rewardPointLabel?.text = "\(reward.point)P"
         
+        //編集中の場合はGETボタンを無効化
+        if self.rewardTableView.isEditing {
+            cell.getButton.isEnabled = false
+            
+            // 編集中でない場合はGETボタンを有効化
+        } else {
+            cell.getButton.isEnabled = true
+        }
+        
         // セルの中のGETボタンをタップすると handleGetButton のメソッドが呼ばれる。ボタンをタップして指を話した時に。
         cell.getButton.addTarget(self, action: #selector(handleGetButton(sender:event:)), for: UIControlEvents.touchUpInside)
-        
         
         // ごほうびをGETしていなかったら(finished が false の時)
         if reward.finished == false {
@@ -91,7 +142,12 @@ class RewardViewController: UIViewController,UITableViewDelegate, UITableViewDat
             cell.getButton.isEnabled = false
         }
         
-        // セルの中のOKボタンを角丸にする
+        // セルの中のGETボタンタップ時にハイライトさせるかどうかの設定
+        cell.getButton.showsTouchWhenHighlighted = true
+        // セルの中のGETボタンタップ時にハイライトさせる設定を取得
+        let _ : Bool = cell.getButton.showsTouchWhenHighlighted
+        
+        // セルの中のGETボタンを角丸にする
         cell.getButton.layer.cornerRadius = 10
         
         return cell
@@ -100,13 +156,21 @@ class RewardViewController: UIViewController,UITableViewDelegate, UITableViewDat
     // セルの中のGETボタンがタップされた時に呼ばれるメソッド
     func handleGetButton(sender: UIButton, event:UIEvent) {
         
+        // アラートコントローラーを使って、ごほうびGETの確認画面を表示する
+        // ① アラートコントローラーの実装
+        let alertController = UIAlertController(title: "ごほうび",message: "ごほうびをGETしますか？", preferredStyle: UIAlertControllerStyle.alert)
+        
+        // ②-1 アラートコントローラーのOKボタンの実装
+        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default){ (action: UIAlertAction) in
+            
+        // ②-2 アラートコントローラーのOKボタンがタップされた時の処理
         // タップされたボタンのセルのインデックス(場所)を求める　→　どのやくそくか
         let touch = event.allTouches?.first
         let point = touch!.location(in: self.rewardTableView)
-        let indexPath = rewardTableView.indexPathForRow(at: point)
+        let indexPath = self.rewardTableView.indexPathForRow(at: point)
         
         // rewardArrayからGETボタンをタップされたインデックスのやくそくを取り出す
-        let rewardData = rewardArray[indexPath!.row]
+        let rewardData = self.rewardArray[indexPath!.row]
         
         // UserDefaults のインスタンス
         let userDefaults = UserDefaults.standard
@@ -130,7 +194,6 @@ class RewardViewController: UIViewController,UITableViewDelegate, UITableViewDat
                     sumPoint += promise.point*promise.count
                 }
                 
-                
                 // こどもが持っている(こどもに属している)ごほうびをポイントの低い順 (昇順)にソートして、完了した物だけ取り出す。
                 let rewards = child.rewards.sorted(byKeyPath: "point", ascending: true).filter("finished = true")
                 
@@ -148,10 +211,9 @@ class RewardViewController: UIViewController,UITableViewDelegate, UITableViewDat
                     sumPoint -= rewardData.point
                     
                     // Realm の書き込みのメソッドを使って finished を true にする →　ごほうびをGET済にする
-                    try! realm.write {
+                    try! self.realm.write {
                         rewardData.finished = true
                     }
-                    
                     
                 } else {
                     
@@ -163,7 +225,20 @@ class RewardViewController: UIViewController,UITableViewDelegate, UITableViewDat
         }
         
         // tableViewを更新してボタンの表示を変える
-        rewardTableView.reloadData()
+        self.rewardTableView.reloadData()
+            
+        }
+        
+        // アラートコントローラーのCANCELボタンの実装
+        let cancelButton = UIAlertAction(title: "キャンセル", style: UIAlertActionStyle.cancel, handler: nil)
+        
+        // ③-1 OKボタンの追加
+        alertController.addAction(okAction)
+        // ③-2 CANCELボタンの追加
+        alertController.addAction(cancelButton)
+        
+        // ④ アラートの表示
+        present(alertController,animated: true,completion: nil)
     }
     
     // 各セルを選択した時に実行されるメソッド
@@ -180,6 +255,9 @@ class RewardViewController: UIViewController,UITableViewDelegate, UITableViewDat
     override func setEditing(_ editing: Bool, animated: Bool) {
         super.setEditing(editing, animated: animated)
         rewardTableView.setEditing(editing, animated: animated)
+        
+        // rewardTableViewを更新し、セルの中のOKボタンのisEnabledを切り替える(編集中なので、無効にする)
+        rewardTableView.reloadData()
     }
     
     // 削除可能なセルの indexpath を指定する (全てのCellを削除可能ととする)
@@ -205,7 +283,7 @@ class RewardViewController: UIViewController,UITableViewDelegate, UITableViewDat
                     tableView.deleteRows(at: [indexPath as IndexPath], with: UITableViewRowAnimation.fade)
                 }
                 
-                // そのごほうびをGETしていなかったら(finished が　false だったら)
+                // そのごほうびをGETしていなかったら(finished が false だったら)
             } else {
                 try! realm.write {
                     // データを削除する
@@ -245,6 +323,9 @@ class RewardViewController: UIViewController,UITableViewDelegate, UITableViewDat
             
             // ＋ボタンをタップした時は新規登録なので isNewReward は true とする
             rewardInputViewController.isNewReward = true
+            
+            // CMPopTipViewの表示を消す
+            cmPop2.dismiss(animated: true)
         }
     }
     
@@ -284,6 +365,48 @@ class RewardViewController: UIViewController,UITableViewDelegate, UITableViewDat
             }
         }
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // UserDefaults のインスタンス
+        let userDefaults = UserDefaults.standard
+        
+        // まだ表示したことがない（pop_reward_get が false のとき）時だけ、cmPopを表示する
+        if userDefaults.bool(forKey: "pop_reward_get") == false {
+            
+            // 表示されている最初のセルを取り出す
+            // 1. 見えているセルの IndexPath の配列を rewardTableView.indexPathsForVisibleRows で取り出す
+            // 2. 最初の要素を first で取り出せば、見えているセルのうち一番上の IndexPath が取り出せる
+            // 3. 見えているセルうち最初の IndexPath を元にセルを取り出し、RewardTableViewCell にキャストする
+            if let indexPath = rewardTableView.indexPathsForVisibleRows?.first {
+                if let cell = rewardTableView.cellForRow(at: indexPath) as? RewardTableViewCell {
+                
+                    // 場所を指定してCMPopTipViewを表示
+                    cmPop.presentPointing(at: cell.getButton, in: self.view, animated: true)
+                    
+                    // 次回は表示されないように pop_reward_get を true で保存する
+                    userDefaults.set(true, forKey: "pop_reward_get")
+                    userDefaults.synchronize()
+                }
+            }
+        }
+        
+        // まだ表示したことがない（pop_reward_add が false のとき）時だけ、cmPopを表示する
+        if userDefaults.bool(forKey: "pop_reward_add") == false {
+            
+            // 場所を指定してCMPopTipViewを表示
+            cmPop2.presentPointing(at: rewardAddButton, animated: true)
+            
+            // 次回は表示されないように pop_reward_add を true で保存する
+            userDefaults.set(true, forKey: "pop_reward_add")
+            userDefaults.synchronize()
+            
+        }
+    }
+    
+            
+            
     
 
     /*

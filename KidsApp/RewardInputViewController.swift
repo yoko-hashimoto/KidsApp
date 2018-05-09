@@ -35,8 +35,8 @@ class RewardInputViewController: UIViewController {
             } else {
                 
                 SVProgressHUD.showError(withStatus: "数字を入力して下さい")
+                return
             }
-            
             
             // UserDefaults のインスタンス
             let userDefaults = UserDefaults.standard
@@ -104,17 +104,10 @@ class RewardInputViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        
-        super.viewWillDisappear(animated)
-    }
-    
-    
     func dismissKeyboard() {
         // キーボードを閉じる
         view.endEditing(true)
     }
-    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

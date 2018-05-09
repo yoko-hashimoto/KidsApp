@@ -8,10 +8,54 @@
 
 import UIKit
 import RealmSwift
+import CMPopTipView
 
 class ChildSwitchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var childSwitchTableView: UITableView!
+    @IBOutlet weak var childAddButton: UIButton!
+    
+    // lazy var は変数が参照されたときに { }() の中で初期化した値を使う
+    lazy var cmPop: CMPopTipView = {
+        
+        // CMPopTipViewのメッセージ
+        let v = CMPopTipView(message: "こどもを追加")!
+        
+        // CMPopTipViewのborderColor
+        v.borderColor = UIColor.clear
+        
+        // CMPopTipViewの背景色
+        v.backgroundColor = UIColor.orange
+        
+        // 3D表示にするかどうか
+        v.has3DStyle = false
+        
+        // グラデーション表示にするかどうか
+        v.hasGradientBackground = false
+        
+        return v
+    }()
+    
+    // lazy var は変数が参照されたときに { }() の中で初期化した値を使う
+    lazy var cmPop2: CMPopTipView = {
+        
+        // CMPopTipViewのメッセージ
+        let v = CMPopTipView(message: "なまえをタップして選択")!
+        
+        // CMPopTipViewのborderColor
+        v.borderColor = UIColor.clear
+        
+        // CMPopTipViewの背景色
+        v.backgroundColor = UIColor.orange
+        
+        // 3D表示にするかどうか
+        v.has3DStyle = false
+        
+        // グラデーション表示にするかどうか
+        v.hasGradientBackground = false
+        
+        return v
+    }()
     
     // DB内の子供が格納されるリスト
     // 以降内容をアップデートするとリスト内は自動的に更新される
@@ -32,11 +76,6 @@ class ChildSwitchViewController: UIViewController, UITableViewDelegate, UITableV
         
         // セルの高さはAutoLayoutに任せる
         childSwitchTableView.rowHeight = UITableViewAutomaticDimension
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     // データの数（=セルの数）を返すメソッド
@@ -84,10 +123,92 @@ class ChildSwitchViewController: UIViewController, UITableViewDelegate, UITableV
         }
     }
     
+    // childAddButtonをタップした時に CMPopTipView の表示を消す
+    @IBAction func childAddButton(_ sender: Any) {
+        cmPop.dismiss(animated: true)
+    }
+    
+    // segueで画面遷移する時に呼ばれる
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        // Segueに、UINavigationControllerを挟むとき
+        // segue.destination as? UINavigationController → UIViewControllerをUINavigationControllerとして変換できる場合
+        if let navC = segue.destination as? UINavigationController {
+            if let childInputViewController: ChildInputViewController = navC.topViewController as? ChildInputViewController {
+                let child = Child()
+                
+                if childArray.count != 0 {
+                    child.id = childArray.max(ofProperty: "id")! + 1
+                }
+                
+                childInputViewController.child = child
+                
+                // childSwitchViewControllerから遷移するので、trueとする
+                childInputViewController.isFromChildSwitch = true
+            }
+        }
+    }
+    
     @IBAction func childSwitchCancelButton(_ sender: Any) {
         
         performSegue(withIdentifier: "back", sender: nil)
     }
+    
+    // ChildInputViewControllerから戻って来た時にchildSwitchTableViewを更新する
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        childSwitchTableView.reloadData()
+        
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // UserDefaults のインスタンス
+        let userDefaults = UserDefaults.standard
+        
+        // まだ表示したことがない（pop_childAddButton が false のとき）だけ、cmPopを表示する
+        if userDefaults.bool(forKey: "pop_childAddButton") == false {
+            
+            // 場所を指定してCMPopTipViewを表示
+            cmPop.presentPointing(at: childAddButton, in: self.view, animated: true)
+            
+            // 次回は表示されないように pop_childAddButton を true で保存する
+            userDefaults.set(true, forKey: "pop_childAddButton")
+            userDefaults.synchronize()
+        }
+        
+        // まだ表示したことがない（pop_promise_ok が false のとき）時だけ、cmPopを表示する
+        if userDefaults.bool(forKey: "pop_child_Choice") == false {
+            
+            // 表示されている最初のセルを取り出す
+            // 1. 見えているセルの IndexPath の配列を prpmiseTableView.indexPathsForVisibleRows で取り出す
+            // 2. 最初の要素を first で取り出せば、見えているセルのうち一番上の IndexPath が取り出せる
+            // 3. 見えているセルうち最初の IndexPath を元にセルを取り出し、PromiseTableViewCell にキャストする
+            if let indexPath = childSwitchTableView.indexPathsForVisibleRows?.first {
+                if let cell = childSwitchTableView.cellForRow(at: indexPath) as? ChildSwitchTableViewCell {
+                    
+                    // 場所を指定してCMPopTipViewを表示
+                    cmPop2.presentPointing(at: cell.childSwitchLabel, in: self.view, animated: true)
+                    
+                    // 次回は表示されないように pop_promise_ok を true で保存する
+                    userDefaults.set(true, forKey: "pop_child_Choice")
+                    userDefaults.synchronize()
+                }
+            }
+        }
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    
+    
+    
+    
 
     /*
     // MARK: - Navigation

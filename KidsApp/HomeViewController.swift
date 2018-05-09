@@ -9,6 +9,7 @@
 import UIKit
 import SVProgressHUD
 import RealmSwift
+import CMPopTipView
 
 class HomeViewController: UIViewController {
     
@@ -17,24 +18,49 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var rewardLabel: UILabel!
     @IBOutlet weak var rewardPointLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var switchButton: UIButton!
 
-    
     var promiseArray:[Promise] = []
     var rewardArry:[Reward] = []
+    
+    // lazy var は変数が参照されたときに { }() の中で初期化した値を使う
+    lazy var cmPop: CMPopTipView = {
+        
+        // CMPopTipViewのメッセージ
+        let v = CMPopTipView(message: "こども切替えはココをタップ")!
+        
+        // CMPopTipViewのborderColor
+        v.borderColor = UIColor.clear
+        
+        // CMPopTipViewの背景色
+        v.backgroundColor = UIColor.orange
+        
+        // 3D表示にするかどうか
+        v.has3DStyle = false
+        
+        // グラデーション表示にするかどうか
+        v.hasGradientBackground = false
+        
+        return v
+    }()
 
+    // switchingButton をタップした時に CMPopTipView の表示を消す
     @IBAction func switchingButton(_ sender: Any) {
+        
+        cmPop.dismiss(animated: true)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
+    // 自作の関数
     func setChild() {
         
         // UserDefaults のインスタンス
         let userDefaults = UserDefaults.standard
         
-        // childIDが保存されていてたら（(子供が選択されていたら）Keyを指定して読み込み(Int型で取り出す)
+        // childIDが保存されていてたら（子供が選択されていたら）Keyを指定して読み込み(Int型で取り出す)
         if let childId: Int = userDefaults.integer(forKey: "child") {
             
             // UserDefaultsに保存されている child.id を元に、選択中の子供を取り出す
@@ -88,9 +114,14 @@ class HomeViewController: UIViewController {
                     rewardPointLabel.text = ""
                 }
             }
+           
+            // childIDが保存されていなかった場合（子供が選択されていなかった場合）の表示
+        } else {
+            nameLabel.text = "なまえ"
+            pointLabel.text = "(  ) P"
+            rewardPointLabel.text = "(  ) P で GET !"
         }
     }
-    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -100,6 +131,25 @@ class HomeViewController: UIViewController {
         nameLabel.clipsToBounds = true
         
         setChild()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // UserDefaults のインスタンス
+        let userDefaults = UserDefaults.standard
+        
+        // まだ表示したことがない（pop_switchButton が false のとき）だけ、cmPopを表示する
+        if userDefaults.bool(forKey: "pop_switchButton") == false {
+            
+            // 場所を指定してCMPopTipViewを表示
+            cmPop.presentPointing(at: switchButton, in: self.view, animated: true)
+            
+            // 次回は表示されないように pop_switchButton を true で保存する
+            userDefaults.set(true, forKey: "pop_switchButton")
+            userDefaults.synchronize()
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {

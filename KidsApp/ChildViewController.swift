@@ -8,10 +8,34 @@
 
 import UIKit
 import RealmSwift
+import CMPopTipView
 
 class ChildViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var childTableView: UITableView!
+    @IBOutlet weak var childAddButton: UIBarButtonItem!
+    
+    
+    // lazy var は変数が参照されたときに { }() の中で初期化した値を使う
+    lazy var cmPop: CMPopTipView = {
+        
+        // CMPopTipViewのメッセージ
+        let v = CMPopTipView(message: "こどもを追加")!
+        
+        // CMPopTipViewのborderColor
+        v.borderColor = UIColor.clear
+        
+        // CMPopTipViewの背景色
+        v.backgroundColor = UIColor.orange
+        
+        // 3D表示にするかどうか
+        v.has3DStyle = false
+        
+        // グラデーション表示にするかどうか
+        v.hasGradientBackground = false
+        
+        return v
+    }()
     
     // Relamインスタンスを取得する
     let realm = try!Realm()
@@ -90,12 +114,10 @@ class ChildViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return cell
     }
     
-    
     // 各セルを選択した時に実行されるメソッド
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "childSegue", sender: nil)
     }
-    
     
     // セルが削除可能なことを伝えるメソッド
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
@@ -162,9 +184,12 @@ class ChildViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let childInputViewController: ChildInputViewController = segue.destination as! ChildInputViewController
         
+        // segueのIdentifierがchildSegue(セルをタップした)の時
         if segue.identifier == "childSegue" {
             let indexPath = self.childTableView.indexPathForSelectedRow
             childInputViewController.child = childArray[indexPath!.row]
+            
+            // +ボタンをタップした時
         } else {
             let child = Child()
             
@@ -173,8 +198,10 @@ class ChildViewController: UIViewController, UITableViewDelegate, UITableViewDat
             }
             
             childInputViewController.child = child
+            
+            // CMPopTipViewの表示を消す
+            cmPop.dismiss(animated: true)
         }
-        
     }
     
     // 入力画面から戻ってきた時にChildTableViewを更新させる
@@ -183,8 +210,29 @@ class ChildViewController: UIViewController, UITableViewDelegate, UITableViewDat
         childTableView.reloadData()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // UserDefaults のインスタンス
+        let userDefaults = UserDefaults.standard
+        
+        // まだ表示したことがない（pop_child_addが false のとき）時だけ、cmPopを表示する
+        if userDefaults.bool(forKey: "pop_child_add") == false {
+            
+            // 場所を指定してCMPopTipViewを表示
+            cmPop.presentPointing(at: childAddButton, animated: true)
+            
+            // 次回は表示されないように pop_child_add を true で保存する
+            userDefaults.set(true, forKey: "pop_child_add")
+            userDefaults.synchronize()
+            
+        }
+    }
+
     
     
+    
+
     /*
     // MARK: - Navigation
 

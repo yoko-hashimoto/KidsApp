@@ -84,6 +84,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="promiseAddButton" destination="fmD-sp-lPk" id="xef-Cl-vjp"/>
                         <outlet property="promiseTableView" destination="aoI-px-vys" id="a6l-bt-BbQ"/>
                         <segue destination="sKG-dz-cJ3" kind="show" identifier="promiseSegue" id="nPL-Oi-EJt"/>
                     </connections>
@@ -247,6 +248,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="rewardAddButton" destination="yg5-qv-dE7" id="d8i-hx-e3v"/>
                         <outlet property="rewardTableView" destination="f4j-DT-gmC" id="DaY-Hj-rb8"/>
                         <segue destination="V0R-nT-NlA" kind="show" identifier="rewardSegue" id="2aH-pz-Exe"/>
                     </connections>
@@ -405,13 +407,14 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="edit" id="Jl8-Hs-Wjc"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="1Pf-57-qJj">
                             <connections>
-                                <segue destination="qyP-4x-DZC" kind="show" id="PPC-l9-07D"/>
+                                <segue destination="qyP-4x-DZC" kind="show" id="xUu-PP-0P6"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="childAddButton" destination="1Pf-57-qJj" id="bVY-Ih-hYg"/>
                         <outlet property="childTableView" destination="aSr-lf-2LC" id="ZzD-c8-pB8"/>
-                        <segue destination="qyP-4x-DZC" kind="show" identifier="childSegue" id="92C-IE-efk"/>
+                        <segue destination="qyP-4x-DZC" kind="show" identifier="childSegue" id="nJf-QX-Nwy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lmD-p3-pE1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -421,7 +424,7 @@
         <!--Child Input View Controller-->
         <scene sceneID="68j-kk-BCu">
             <objects>
-                <viewController id="qyP-4x-DZC" customClass="ChildInputViewController" customModule="KidsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="qyP-4x-DZC" customClass="ChildInputViewController" customModule="KidsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ptg-hO-DcO"/>
                         <viewControllerLayoutGuide type="bottom" id="aLZ-yY-ixc"/>
@@ -487,6 +490,7 @@
                             <constraint firstItem="XJW-F3-0B9" firstAttribute="centerX" secondItem="fQy-I6-EUn" secondAttribute="centerX" id="zRr-GA-FWY"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="uh3-q9-tGW"/>
                     <connections>
                         <outlet property="cancelButton" destination="zTY-Me-t1d" id="yYc-kj-oQW"/>
                         <outlet property="childTextField" destination="5Xj-CB-k7f" id="WiY-p2-bOx"/>
@@ -495,7 +499,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6jx-yW-GrH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3711.594202898551" y="7.3369565217391308"/>
+            <point key="canvasLocation" x="-1098" y="1716"/>
         </scene>
         <!--ホーム-->
         <scene sceneID="gFG-8Z-Roq">
@@ -550,7 +554,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T3t-bN-oIf">
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T3t-bN-oIf">
                                 <rect key="frame" x="280" y="75" width="41" height="41"/>
                                 <state key="normal" image="switch">
                                     <color key="titleColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -589,6 +593,7 @@
                         <outlet property="pointLabel" destination="i7a-lW-6sY" id="QP8-UW-gWV"/>
                         <outlet property="rewardLabel" destination="nJ4-K4-XgT" id="r3z-Yk-nix"/>
                         <outlet property="rewardPointLabel" destination="2F4-hY-qnb" id="w0p-nN-csR"/>
+                        <outlet property="switchButton" destination="T3t-bN-oIf" id="4ma-Ec-9zZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="owN-tN-GuB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -665,13 +670,30 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JtU-TJ-GJ2">
+                                        <rect key="frame" x="253" y="14" width="22" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="22" id="JEr-0k-SXg"/>
+                                            <constraint firstAttribute="height" constant="22" id="Q9D-Pl-rtn"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="＋">
+                                            <color key="titleColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="childAddButton:" destination="wOn-bV-WGL" eventType="touchUpInside" id="C86-Cr-PfJ"/>
+                                            <segue destination="uKQ-XE-DTg" kind="show" identifier="" id="EsK-91-4oE"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="LPV-Xd-8It"/>
+                                    <constraint firstItem="JtU-TJ-GJ2" firstAttribute="top" secondItem="22T-N9-XSS" secondAttribute="top" constant="14" id="bTD-QF-Z8R"/>
                                     <constraint firstItem="uCq-15-uYJ" firstAttribute="leading" secondItem="22T-N9-XSS" secondAttribute="leading" constant="8" id="na7-3J-1qW"/>
                                     <constraint firstAttribute="trailing" secondItem="uCq-15-uYJ" secondAttribute="trailing" constant="8" id="o7T-FH-PFy"/>
                                     <constraint firstAttribute="bottom" secondItem="uCq-15-uYJ" secondAttribute="bottom" id="pNJ-eT-6cs"/>
+                                    <constraint firstAttribute="trailing" secondItem="JtU-TJ-GJ2" secondAttribute="trailing" constant="28" id="sDC-6t-7pY"/>
                                     <constraint firstItem="uCq-15-uYJ" firstAttribute="top" secondItem="22T-N9-XSS" secondAttribute="top" id="zrv-O5-0Pv"/>
                                 </constraints>
                             </view>
@@ -721,6 +743,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="childAddButton" destination="JtU-TJ-GJ2" id="WSU-k8-Shp"/>
                         <outlet property="childSwitchTableView" destination="XNc-tz-IJ6" id="bOh-fx-VRc"/>
                         <segue destination="bi0-dT-S1a" kind="unwind" identifier="back" unwindAction="unwind:" id="clk-0D-GgY"/>
                     </connections>
@@ -728,7 +751,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YIk-aq-SK4" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="bi0-dT-S1a" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-1852.5" y="912.67605633802816"/>
+            <point key="canvasLocation" x="-1853.5999999999999" y="912.5937031484259"/>
         </scene>
         <!--ごほうび-->
         <scene sceneID="oGP-kk-cob">
@@ -770,6 +793,25 @@
             </objects>
             <point key="canvasLocation" x="840.79999999999995" y="913.49325337331345"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5lN-fv-8lV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uKQ-XE-DTg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cAY-uP-Dxf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qyP-4x-DZC" kind="relationship" relationship="rootViewController" id="tza-y0-EWi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9r7-eU-nG4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1854" y="1716"/>
+        </scene>
     </scenes>
     <resources>
         <image name="child-2" width="25" height="25"/>
@@ -781,7 +823,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="2aH-pz-Exe"/>
-        <segue reference="92C-IE-efk"/>
         <segue reference="nPL-Oi-EJt"/>
+        <segue reference="nJf-QX-Nwy"/>
     </inferredMetricsTieBreakers>
 </document>

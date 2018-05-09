@@ -18,7 +18,6 @@ class Reward: Object {
     // ごほうびポイント
     dynamic var point = 0
     
-
     // 完了したごほうび。完了すると true　となる
     dynamic var finished = false
     

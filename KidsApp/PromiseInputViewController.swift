@@ -35,6 +35,7 @@ class PromiseInputViewController: UIViewController {
                 // Int型に変換できなかった時はモーダルでエラー表示をさせる
             } else {
                 SVProgressHUD.showError(withStatus: "数字を入力して下さい")
+                return
             }
             
             // UserDefaults のインスタンス
@@ -50,7 +51,7 @@ class PromiseInputViewController: UIViewController {
                 // childrenは配列なので、その中から最初の子供を取り出し、以下の内容を実行する
                 if let child = children.first {
                     
-                    // isNewPromise が　false の時
+                    // isNewPromise が
                     if isNewPromise {
                         
                         // UserDefaultsに保存されているこどもにやくそくを追加する
@@ -99,11 +100,6 @@ class PromiseInputViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        
-        super.viewWillDisappear(animated)
     }
     
     func dismissKeyboard() {

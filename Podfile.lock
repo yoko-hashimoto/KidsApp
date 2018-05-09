@@ -1,4 +1,5 @@
 PODS:
+  - CMPopTipView (2.3.0)
   - Realm (2.6.2):
     - Realm/Headers (= 2.6.2)
   - Realm/Headers (2.6.2)
@@ -7,14 +8,16 @@ PODS:
   - SVProgressHUD (2.1.2)
 
 DEPENDENCIES:
+  - CMPopTipView
   - RealmSwift (= 2.6.2)
   - SVProgressHUD
 
 SPEC CHECKSUMS:
+  CMPopTipView: 774e0230b5c73abb3c39051da6d8a383373c4f7f
   Realm: 29222766425b9f831228f81b63f0e38a97a4d700
   RealmSwift: d161a80f96cb91ae88391a7d5a9cf08024a7bc8e
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
 
-PODFILE CHECKSUM: a7f7587303d55605362fce34d77e0303d9e6ba2f
+PODFILE CHECKSUM: 38e276136be71d91fb4a73ebfe140434db0e0732
 
 COCOAPODS: 1.1.1

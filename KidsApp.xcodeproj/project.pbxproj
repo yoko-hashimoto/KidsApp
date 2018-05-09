@@ -24,23 +24,6 @@
 		9F4320421FAC645900C4DE68 /* Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4320411FAC645900C4DE68 /* Child.swift */; };
 		9F44A2241FAB30AC0092AA43 /* Reward.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F44A2231FAB30AB0092AA43 /* Reward.swift */; };
 		9F758B321F9AAD8900B7A0E4 /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F758B311F9AAD8900B7A0E4 /* Promise.swift */; };
-		9F80B96E202B902E00E3BCF6 /* child-2@2×.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F80B95C202B902E00E3BCF6 /* child-2@2×.png */; };
-		9F80B96F202B902E00E3BCF6 /* child-2@3×.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F80B95D202B902E00E3BCF6 /* child-2@3×.png */; };
-		9F80B970202B902E00E3BCF6 /* child.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F80B95E202B902E00E3BCF6 /* child.png */; };
-		9F80B971202B902E00E3BCF6 /* child@2×.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F80B95F202B902E00E3BCF6 /* child@2×.png */; };
-		9F80B972202B902E00E3BCF6 /* child@3×.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F80B960202B902E00E3BCF6 /* child@3×.png */; };
-		9F80B973202B902E00E3BCF6 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F80B961202B902E00E3BCF6 /* home.png */; };
-		9F80B974202B902E00E3BCF6 /* home@2×.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F80B962202B902E00E3BCF6 /* home@2×.png */; };
-		9F80B975202B902E00E3BCF6 /* home@3×.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F80B963202B902E00E3BCF6 /* home@3×.png */; };
-		9F80B976202B902E00E3BCF6 /* promise.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F80B964202B902E00E3BCF6 /* promise.png */; };
-		9F80B977202B902E00E3BCF6 /* promise＠×3.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F80B965202B902E00E3BCF6 /* promise＠×3.png */; };
-		9F80B978202B902E00E3BCF6 /* promise@2×.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F80B966202B902E00E3BCF6 /* promise@2×.png */; };
-		9F80B979202B902E00E3BCF6 /* reward.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F80B967202B902E00E3BCF6 /* reward.png */; };
-		9F80B97A202B902E00E3BCF6 /* reward@2×.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F80B968202B902E00E3BCF6 /* reward@2×.png */; };
-		9F80B97B202B902E00E3BCF6 /* reward@3×.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F80B969202B902E00E3BCF6 /* reward@3×.png */; };
-		9F80B97C202B902E00E3BCF6 /* switch.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F80B96A202B902E00E3BCF6 /* switch.png */; };
-		9F80B97D202B902E00E3BCF6 /* switch@2×.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F80B96B202B902E00E3BCF6 /* switch@2×.png */; };
-		9F80B97E202B902E00E3BCF6 /* switch@3×.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F80B96C202B902E00E3BCF6 /* switch@3×.png */; };
 		9FA6AC231F90F31200F746EB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA6AC221F90F31200F746EB /* HomeViewController.swift */; };
 		9FCF83BA20319B5A00136A9B /* hiyoko.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 9FCF83B920319B5A00136A9B /* hiyoko.PNG */; };
 		9FCF83BC2031BE2800136A9B /* Pget-2ー.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FCF83BB2031BE2800136A9B /* Pget-2ー.png */; };
@@ -75,23 +58,6 @@
 		9F4320411FAC645900C4DE68 /* Child.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Child.swift; sourceTree = "<group>"; };
 		9F44A2231FAB30AB0092AA43 /* Reward.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reward.swift; sourceTree = "<group>"; };
 		9F758B311F9AAD8900B7A0E4 /* Promise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Promise.swift; sourceTree = "<group>"; };
-		9F80B95C202B902E00E3BCF6 /* child-2@2×.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "child-2@2×.png"; path = "../../Downloads/Kids App image /child-2@2×.png"; sourceTree = "<group>"; };
-		9F80B95D202B902E00E3BCF6 /* child-2@3×.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "child-2@3×.png"; path = "../../Downloads/Kids App image /child-2@3×.png"; sourceTree = "<group>"; };
-		9F80B95E202B902E00E3BCF6 /* child.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = child.png; path = "../../Downloads/Kids App image /child.png"; sourceTree = "<group>"; };
-		9F80B95F202B902E00E3BCF6 /* child@2×.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "child@2×.png"; path = "../../Downloads/Kids App image /child@2×.png"; sourceTree = "<group>"; };
-		9F80B960202B902E00E3BCF6 /* child@3×.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "child@3×.png"; path = "../../Downloads/Kids App image /child@3×.png"; sourceTree = "<group>"; };
-		9F80B961202B902E00E3BCF6 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home.png; path = "../../Downloads/Kids App image /home.png"; sourceTree = "<group>"; };
-		9F80B962202B902E00E3BCF6 /* home@2×.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "home@2×.png"; path = "../../Downloads/Kids App image /home@2×.png"; sourceTree = "<group>"; };
-		9F80B963202B902E00E3BCF6 /* home@3×.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "home@3×.png"; path = "../../Downloads/Kids App image /home@3×.png"; sourceTree = "<group>"; };
-		9F80B964202B902E00E3BCF6 /* promise.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = promise.png; path = "../../Downloads/Kids App image /promise.png"; sourceTree = "<group>"; };
-		9F80B965202B902E00E3BCF6 /* promise＠×3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "promise＠×3.png"; path = "../../Downloads/Kids App image /promise＠×3.png"; sourceTree = "<group>"; };
-		9F80B966202B902E00E3BCF6 /* promise@2×.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "promise@2×.png"; path = "../../Downloads/Kids App image /promise@2×.png"; sourceTree = "<group>"; };
-		9F80B967202B902E00E3BCF6 /* reward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = reward.png; path = "../../Downloads/Kids App image /reward.png"; sourceTree = "<group>"; };
-		9F80B968202B902E00E3BCF6 /* reward@2×.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "reward@2×.png"; path = "../../Downloads/Kids App image /reward@2×.png"; sourceTree = "<group>"; };
-		9F80B969202B902E00E3BCF6 /* reward@3×.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "reward@3×.png"; path = "../../Downloads/Kids App image /reward@3×.png"; sourceTree = "<group>"; };
-		9F80B96A202B902E00E3BCF6 /* switch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = switch.png; path = "../../Downloads/Kids App image /switch.png"; sourceTree = "<group>"; };
-		9F80B96B202B902E00E3BCF6 /* switch@2×.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "switch@2×.png"; path = "../../Downloads/Kids App image /switch@2×.png"; sourceTree = "<group>"; };
-		9F80B96C202B902E00E3BCF6 /* switch@3×.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "switch@3×.png"; path = "../../Downloads/Kids App image /switch@3×.png"; sourceTree = "<group>"; };
 		9FA6AC221F90F31200F746EB /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9FCF83B920319B5A00136A9B /* hiyoko.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hiyoko.PNG; sourceTree = "<group>"; };
 		9FCF83BB2031BE2800136A9B /* Pget-2ー.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pget-2ー.png"; sourceTree = "<group>"; };
@@ -153,7 +119,6 @@
 				9F0DCF821F90D67D00FCE668 /* AppDelegate.swift */,
 				9F0DCF841F90D67D00FCE668 /* ViewController.swift */,
 				9F0DCF861F90D67D00FCE668 /* Main.storyboard */,
-				9F31DC6E1FB6C8CF00B4D733 /* ChildSwitchViewController.swift */,
 				9FDF25C91F94C390001CB83F /* PromiseTableViewCell.swift */,
 				9FDF25CA1F94C390001CB83F /* PromiseTableViewCell.xib */,
 				9FDF25CD1F94D591001CB83F /* RewardTableViewCell.swift */,
@@ -162,6 +127,7 @@
 				9FDF25D21F94D5D2001CB83F /* ChildTableViewCell.xib */,
 				9F31DC741FB7449000B4D733 /* ChildSwitchTableViewCell.swift */,
 				9F31DC751FB7449000B4D733 /* ChildSwitchTableViewCell.xib */,
+				9F31DC6E1FB6C8CF00B4D733 /* ChildSwitchViewController.swift */,
 				9FA6AC221F90F31200F746EB /* HomeViewController.swift */,
 				9F4320411FAC645900C4DE68 /* Child.swift */,
 				9F0DCFA21F90EBD800FCE668 /* ChildInputViewController.swift */,
@@ -173,23 +139,6 @@
 				9F0DCF961F90D85C00FCE668 /* PromiseInputViewController.swift */,
 				9F0DCF941F90D72B00FCE668 /* PromiseViewController.swift */,
 				9F0DCF891F90D67D00FCE668 /* Assets.xcassets */,
-				9F80B95C202B902E00E3BCF6 /* child-2@2×.png */,
-				9F80B95D202B902E00E3BCF6 /* child-2@3×.png */,
-				9F80B95E202B902E00E3BCF6 /* child.png */,
-				9F80B95F202B902E00E3BCF6 /* child@2×.png */,
-				9F80B960202B902E00E3BCF6 /* child@3×.png */,
-				9F80B961202B902E00E3BCF6 /* home.png */,
-				9F80B962202B902E00E3BCF6 /* home@2×.png */,
-				9F80B963202B902E00E3BCF6 /* home@3×.png */,
-				9F80B964202B902E00E3BCF6 /* promise.png */,
-				9F80B965202B902E00E3BCF6 /* promise＠×3.png */,
-				9F80B966202B902E00E3BCF6 /* promise@2×.png */,
-				9F80B967202B902E00E3BCF6 /* reward.png */,
-				9F80B968202B902E00E3BCF6 /* reward@2×.png */,
-				9F80B969202B902E00E3BCF6 /* reward@3×.png */,
-				9F80B96A202B902E00E3BCF6 /* switch.png */,
-				9F80B96B202B902E00E3BCF6 /* switch@2×.png */,
-				9F80B96C202B902E00E3BCF6 /* switch@3×.png */,
 				9FCF83B920319B5A00136A9B /* hiyoko.PNG */,
 				9FCF83BD203483D300136A9B /* hiyoko-2.PNG */,
 				9FCF83BB2031BE2800136A9B /* Pget-2ー.png */,
@@ -270,33 +219,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F80B97E202B902E00E3BCF6 /* switch@3×.png in Resources */,
-				9F80B97C202B902E00E3BCF6 /* switch.png in Resources */,
-				9F80B97A202B902E00E3BCF6 /* reward@2×.png in Resources */,
 				9F31DC771FB7449000B4D733 /* ChildSwitchTableViewCell.xib in Resources */,
-				9F80B97D202B902E00E3BCF6 /* switch@2×.png in Resources */,
-				9F80B975202B902E00E3BCF6 /* home@3×.png in Resources */,
-				9F80B973202B902E00E3BCF6 /* home.png in Resources */,
-				9F80B972202B902E00E3BCF6 /* child@3×.png in Resources */,
-				9F80B96F202B902E00E3BCF6 /* child-2@3×.png in Resources */,
-				9F80B974202B902E00E3BCF6 /* home@2×.png in Resources */,
 				9FCF83BA20319B5A00136A9B /* hiyoko.PNG in Resources */,
 				9FDF25D01F94D591001CB83F /* RewardTableViewCell.xib in Resources */,
-				9F80B977202B902E00E3BCF6 /* promise＠×3.png in Resources */,
-				9F80B970202B902E00E3BCF6 /* child.png in Resources */,
-				9F80B97B202B902E00E3BCF6 /* reward@3×.png in Resources */,
 				9FCF83BE203483D300136A9B /* hiyoko-2.PNG in Resources */,
 				9F0DCF8D1F90D67D00FCE668 /* LaunchScreen.storyboard in Resources */,
-				9F80B96E202B902E00E3BCF6 /* child-2@2×.png in Resources */,
 				9FDF25D41F94D5D2001CB83F /* ChildTableViewCell.xib in Resources */,
-				9F80B971202B902E00E3BCF6 /* child@2×.png in Resources */,
 				9F0DCF8A1F90D67D00FCE668 /* Assets.xcassets in Resources */,
-				9F80B976202B902E00E3BCF6 /* promise.png in Resources */,
 				9FCF83BC2031BE2800136A9B /* Pget-2ー.png in Resources */,
 				9F0DCF881F90D67D00FCE668 /* Main.storyboard in Resources */,
 				9FDF25CC1F94C390001CB83F /* PromiseTableViewCell.xib in Resources */,
-				9F80B979202B902E00E3BCF6 /* reward.png in Resources */,
-				9F80B978202B902E00E3BCF6 /* promise@2×.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
